@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title> Registration </title> 
+        <meta charset="UTF-8"> 
+        <link rel="icon" type = "image/png" href="images/logo.png"> 
+        <link rel="stylesheet" href="login.css"> <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     </head>
+<nav> 
+                <div class="nav-inner"> 
+                    <a href = "AAC.html"> Home </a> 
+                    <a href = "about.html"> About</a> 
+                    <a href = "buyart.html"> Support Us</a> 
+                    <a href = "ourmembers.html"> Our Members</a> 
+                    <a href = "joinus.html"> Join Us</a> 
+                    <a href = "Login.html" class="box_text">Register</a> 
+                    <span></span> 
+                </div> 
+            </nav> 
+            
+<div class="main-center">
+    <div class="form-container">
+        <form id="registration-form">
+            <div style="margin-bottom: 2rem">
+                <h2 class="form-title">Registration Form</h2>
+                <p class="form-desc">
+                    Hello There! If you would like to register for artists against cancer, please fill out the form:
+                </p>
+            </div>
+
+            <label class="form-label">Full Name <i class='bx bxs-user'></i></label>
+            <input
+                type="text"
+                name="fullname"
+                id="fullname"
+                class="form-input"
+                placeholder="Enter your full name"
+                required
+            />
+
+            <label class="form-label">Email Address <i class='bx bxs-envelope' ></i></label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-input"
+                placeholder="Enter your email"
+                required
+            />
+
+            <label class="form-label"
+                >Phone Number (Optional) <i class='bx bxs-phone'></i></label
+            >
+            <input
+                type="tel"
+                name="phone"
+                id="phone"
+                class="form-input"
+                placeholder="000-000-0000"
+            />
+
+            <label class="form-label"
+            >Field of Expertise <i class='bx bxs-paint' ></i></label
+            >
+            <input
+                type="tel"
+                name="field"
+                id="field"
+                class="form-input"
+                placeholder="I specialize in _______ but I can also _______."
+                required
+            />
+
+            <label class="form-label"
+            >Time it takes to finish a work <i class='bx bxs-time' ></i></label
+            >
+            <input
+                type="tel"
+                name="time"
+                id="time"
+                class="form-input"
+                placeholder="I can finish a _______ in _______, but for _______ it takes me _______."
+                required
+            />
+
+            <button class="form-btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("7HqPN5nytbxDFuKlf"); 
+
+  document.getElementById("registration-form").addEventListener("submit", function(e) {
+      e.preventDefault(); // prevent normal form submission
+
+    const fullname = document.getElementById("fullname").value;
+
+      emailjs.sendForm('service_2yr7yof', 'template_pq4wzvn', this)
+      .then(function() {
+        alert(`Thanks ${fullname}! Your registration has been submitted successfully!`);
+        document.getElementById("registration-form").reset(); // clear form
+      }, function(error) {
+          alert("Failed to send. Please try again.\n" + JSON.stringify(error));
+      });
+  });
+</script>

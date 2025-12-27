@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+
+nav {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100vw;              
+    height: 60px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.box_text {
+    border: 2px solid white;
+    padding: 5px 30px;
+    margin: 0px;
+    border-radius: 100px;
+
+}
+
+nav .nav-inner {
+    position: relative;
+    width: 95%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    position: relative;
+    font-size: 1em;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    z-index: 1;
+    filter: blur(.5px);
+}
+
+
+nav span {
+    position: absolute;
+    top: 0;
+    left: 82%;
+    width: 15%; 
+    height: 100%;
+    background: linear-gradient(45deg, #0e063d, rgb(0, 179, 255));
+    border-radius: 8px;
+    transition: 0.8s ease-in-out;
+}
+
+nav a:hover {
+    transform: scale(1.03); 
+    transition: transform .25s ease-in-out .8s;
+    filter: blur(0);
+    transition: .3s ease-in .6s;
+}
+
+
+
+nav a:nth-child(1):hover ~ span {left: 0%} 
+nav a:nth-child(2):hover ~ span {left: 13%; }
+nav a:nth-child(3):hover ~ span { left: 28.7%; }
+nav a:nth-child(4):hover ~ span { left: 47%; }
+nav a:nth-child(5):hover ~ span { left: 64.5%; }
+nav a:nth-child(6):hover ~ span { left: 82%; }
+
+
+nav a:nth-child(6):hover {
+    color:#00a2e2;
+    background-color: #000;
+     border: 3px solid #00a2e2;
+    transition: .3s ease-in-out .6s}
+    
+    
+    body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(
+        10deg,
+        #00a2e2 0%,
+        #00a2e2 45%,
+        rgb(255, 255, 255) 45%,
+        rgb(255, 255, 255) 100%
+    );
+        margin: 0;
+        padding: 0;
+    }
+    .main-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding-top: 8rem;
+        box-sizing: border-box;
+    }
+
+    .form-container {
+        margin: 0 auto;
+        max-width: 570px;
+        width: 100%;
+        background: white;
+        border: .01rem solid #00a2e2;
+        padding: 2.5rem; 
+        border-radius: .5rem; 
+    }
+
+    .form-title {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #00a2e2 ; 
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .form-desc {
+        color: #86ddff ; /
+        margin-bottom: 2rem; 
+        font-size: 0.875rem; 
+        text-align: center;
+        line-height: 1.5;
+    }
+
+
+    .form-label {
+        display: block;
+        margin-bottom: 0.5rem; 
+        font-size: 0.875rem; 
+        font-weight: 600;
+        color: #00a2e2;
+    }
+
+    .form-input,
+    .form-select {
+        width: 100%;
+        padding: 0.875rem 1.25rem; 
+        border: 1px solid #00a2e2;
+        border-radius: 0.5rem; /* 8px */
+        background: #ffffff;
+        font-weight: 500;
+        font-size: 1rem; /* 16px */
+        outline: none;
+        box-sizing: border-box;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        margin-bottom: 1.25rem; /* 20px */
+    }
+
+    .form-input::placeholder {
+        color: #9ca3af;
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+        border-color: #00a2e2;
+        box-shadow: 0 0 0 3px rgba(29, 22, 156, 0.2);
+    }
+
+    .form-btn {
+        text-align: center;
+        width: 100%;
+        font-size: 1rem; 
+        border-radius: 0.5rem;
+        padding: 0.875rem 1.5rem; 
+        border: none;
+        font-weight: 600;
+        background-color: #00a2e2;
+        color: white;
+        cursor: pointer;
+        margin-top: 1.5rem; 
+        transition: background-color 1s;
+    }
+
+    .form-btn:hover {
+        background-color: #0080ff; 
+
+
+    }
+    @media (max-width: 600px) {
+        .main-center {
+            padding: 1rem;
+        }
+
+        .form-container {
+            padding: 1.5rem;
+        }
+
+        .form-title {
+            font-size: 1.5rem; 
+        }
+    }
